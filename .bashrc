@@ -59,9 +59,9 @@ fi
 export GIT_PS1_SHOWDIRTYSTATE=true
 export GIT_PS1_SHOWUNTRACKEDFILES=true
 if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\n\033[38;5;11m\]\u\[\033[00m\]@\[\033[38;5;10m\]\h:\[\033[01;34m\]\w\[\033[38;5;9m\]$(__git_ps1 " (%s)")\[\033[00m\]\$\n> '
+    PS1='${debian_chroot:+($debian_chroot)}\[\n\033[38;5;36m\]\u \[\033[38;5;0m\]@\[\033[38;5;15m\]\h\[\033[38;5;11m\][\w]\[\033[38;5;9m\]$(__git_ps1 " (%s)")\[\033[38;5;11m\]\n->\[\033[00m\] '
 else
-    PS1='${debian_chroot:+($debian_chroot)}\n\u@\h:\w$(__git_ps1 " (%s)")\$\n> '
+    PS1='${debian_chroot:+($debian_chroot)}\n\u @\h[\w]$(__git_ps1 " (%s)")\n-> '
 fi
 unset color_prompt force_color_prompt
 
